@@ -6,3 +6,13 @@ export const getUsers=()=>{
         }
     })
 }
+export const createUser=({firstName,lastName})=>{
+    console.log(firstName)
+    return axios.post('/users',{
+       firstName,
+       lastName
+    })
+}
+export const deleteUser=({userId})=>{
+    return axios.delete(`/users/${userId}`)
+}
