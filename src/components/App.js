@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { connect } from "react-redux";
 import {
   getUsersRequest,
@@ -17,6 +17,7 @@ import {Alert} from 'reactstrap';
 //   }
 // }
 function App({ getUsersRequest, deleteUserRequest, createUserRequest, userError,users }) {
+// const [usersList,setUsersList]=useState([])
   useEffect(() => {
     getUsersRequest();
   }, []);

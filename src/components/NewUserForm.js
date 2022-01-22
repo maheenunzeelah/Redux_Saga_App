@@ -5,7 +5,8 @@ function NewUserForm({onSubmit}){
     const [firstName,setFirstName]=useState('');
     const [lastName,setLastName]=useState('');
     const handleSubmit=(e)=>{
-     e.preventDefault()
+     e.preventDefault();
+     e.stopPropagation()
      onSubmit(firstName,lastName)
      setFirstName('');
      setLastName('');
